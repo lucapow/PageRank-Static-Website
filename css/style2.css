@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000000;
+    font-family: 'Noto Sans TC', sans-serif;
+    cursor: url('../image/baseball\ bat.ico') 16 16, auto; /* 16px 偏移量 */
+    margin: 0;
+    padding: 0;
+    background-color: #faf5ed; /* 修改此行來設置背景顏色 */
+
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: url('../image/bar.png'); /* 替換為您的頂部圖案 */
+    background-size: cover;
+        z-index: 1000;
+}
+
+.nav-bar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: left;
+    padding: 40px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-bar a.active {
+    font-weight: 700; /* 強制應用加粗 */
+    background-color: #e91e63; /* 使用背景顏色來凸顯 */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.nav-bar a:hover {
+    color: #e91e63;
+}
+
+.content {
+    text-align: center;
+    max-width: 100%;
+    margin: 100px auto 0; /* 確保內容不被固定導航欄遮擋 */
+    padding: 50px 0px;
+}
+
+/* 標題部分（具有底線效果） */
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 100px solid #e91e63;  /* 添加底線 */
+
+}
+
+header h1::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;  /* 底線的粗細 */
+    background-color: #e91e63;  /* 底線顏色 */
+    border-radius: 2px;  /* 圓角 */
+}
+
+/* 副標題 */
+.content h2 {
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 按鈕組樣式 */
+.position-buttons {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.position-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 添加過渡效果 */
+}
+
+.position-buttons button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* 滑過時有一點向上的效果 */
+}
+
+/* 表格樣式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+/* 表格中偶數行的背景顏色 */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* style.css */
+body {
+    background-color: #faf5ed; /* 背景顏色 */
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative; /* 為偽元素提供定位基準 */
+    display: inline-block; /* 讓標題只占據自己的寬度 */
+    padding-bottom: 10px; /* 與底線的距離 */
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* 從標題的中間開始 */
+    bottom: 0;
+    transform: translateX(-50%); /* 向左偏移，使底線居中 */
+    width: 1000px; /* 設定底線的長度，比如 50%，可以根據需要調整 */
+    height: 1px; /* 設定底線的厚度 */
+    background-color: #333; /* 底線顏色 */
+    border-radius: 2px; /* 圓角 */
+}
+.table {
+    background-color: #ffffff;
+    border-radius: 8px; /* 表格圓角 */
+    overflow: hidden;
+}
+
+.table thead th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* 偶數行背景色 */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5e6e8; /* 滑過行的背景顏色 */
+}
+.pagerank-description {
+    background-color: #f9f9f9; /* 背景顏色 */
+    padding: 20px; /* 內部邊距 */
+    border-radius: 10px; /* 圓角 */
+    margin-top: 20px; /* 與其他元素的間距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+
+.pagerank-description h2 {
+    color: #e91e63; /* 標題顏色 */
+    margin-bottom: 15px; /* 與段落之間的間距 */
+}
+
+.pagerank-description p {
+    line-height: 1.6; /* 行距 */
+    margin-bottom: 15px; /* 每個段落之間的間距 */
+}

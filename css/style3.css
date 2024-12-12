@@ -1,0 +1,229 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Noto Sans TC', sans-serif;
+    cursor: url('../image/baseball\ bat.ico') 16 16, auto; /* 16px 偏移量 */
+    margin: 0;
+    padding: 0;
+    background-color: #faf5ed; /* 修改此行來設置背景顏色 */
+
+
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: url('../image/bar.png'); /* 替換為您的頂部圖案 */
+    background-size: cover;
+        z-index: 1000;
+}
+
+.nav-bar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: left;
+    padding: 40px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-bar a.active {
+    font-weight: 700; /* 強制應用加粗 */
+    background-color: #e91e63; /* 使用背景顏色來凸顯 */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.nav-bar a:hover {
+    color: #e91e63;
+}
+header h1::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;  /* 底線的粗細 */
+    background-color: #e91e63;  /* 底線顏色 */
+    border-radius: 2px;  /* 圓角 */
+}
+
+/* 副標題 */
+.content h2 {
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content {
+    text-align: center;
+    max-width: 100%;
+    margin: 100px auto 0; /* 確保內容不被固定導航欄遮擋 */
+    padding: 50px 0px;
+}
+/* 標題部分（具有底線效果） */
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 100px solid #e91e63;  /* 添加底線 */
+
+}
+
+header h1::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;  /* 底線的粗細 */
+    background-color: #e91e63;  /* 底線顏色 */
+    border-radius: 2px;  /* 圓角 */
+}
+
+/* 副標題 */
+.content h2 {
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+.content img {
+    display: block;
+    margin: 0 auto; /* 將圖片置中 */
+    max-width: 100%; /* 確保圖片不會超過容器寬度 */
+    height: auto; /* 保持圖片的原始比例 */
+}
+/* 搜尋和下拉選單樣式 */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.search-container input,
+.search-container select,
+.search-container button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.search-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* 團隊詳細資訊樣式 */
+.team-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.team-box {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-box h3 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.team-stats {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.team-stats p {
+    margin: 5px 0;
+}
+
+/* 最近比賽表格樣式 */
+.recent-matches {
+    margin-top: 30px;
+}
+
+.recent-matches table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-matches th, .recent-matches td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.recent-matches th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.recent-matches td {
+    color: #333;
+}
+
+.recent-matches tr:last-child td {
+    border-bottom: none;
+}
+
+.recent-matches tr:hover {
+    background-color: #f1f1f1;
+}
+.progress {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background-color: #007bff; /* 進度條顏色 */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}

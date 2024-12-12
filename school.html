@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各隊學校比較</title> <!-- 頁面的標題 -->
+    <link href="css/style3.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function filterDropdown(inputId, dropdownId) {
+            var input = document.getElementById(inputId);
+            var filter = input.value.toUpperCase();
+            var dropdown = document.getElementById(dropdownId);
+            var options = dropdown.getElementsByTagName("option");
+            
+            for (var i = 0; i < options.length; i++) {
+                var txtValue = options[i].textContent || options[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    options[i].style.display = "";
+                } else {
+                    options[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>   
+    <!-- 固定標頭導覽欄 -->
+    <header class="fixed-header">
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-item"><a class="nav-link active" href="home.html">首頁</a></li>
+                <li class="nav-item"><a class="nav-link" href="school.html">學校資料</a></li>
+                <li class="nav-item"><a class="nav-link" href="data.html">棒球數據</a></li>
+                <li class="nav-item"><a class="nav-link" href="visual.html">歷年數據圖表</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.tiktok.com" target="_blank">TikTok</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content container mt-5"> 
+        <h2>PageRank 指標介紹</h2>
+        <div class="pagerank-description mb-4">
+            <strong>請選舉左右兩邊的各個學校來查看兩隊的近期對戰情形及資訊</strong>
+            <form method="GET" action="compare.html">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="text" id="homeTeamSearch" class="form-control" placeholder="搜尋或選擇主隊" onkeyup="filterDropdown('homeTeamSearch', 'homeTeamDropdown')">
+                            <select id="homeTeamDropdown" name="home_team" class="form-select">
+                                <option value="">選擇主隊</option>
+                                <option value="Team1">Team1</option>
+                                <option value="Team2">Team2</option>
+                                <option value="Team3">Team3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="text" id="awayTeamSearch" class="form-control" placeholder="搜尋或選擇客隊" onkeyup="filterDropdown('awayTeamSearch', 'awayTeamDropdown')">
+                            <select id="awayTeamDropdown" name="away_team" class="form-select">
+                                <option value="">選擇客隊</option>
+                                <option value="Team4">Team4</option>
+                                <option value="Team5">Team5</option>
+                                <option value="Team6">Team6</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">搜尋</button>
+            </form>
+        </div>
+
+        <!-- 最近戰績區塊 -->
+        <h3 class="mt-4">最近戰績</h3>
+        <div class="recent-matches">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>主隊</th>
+                        <th>比分</th>
+                        <th>客隊</th>
+                        <th>賽事</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-01-15</td>
+                        <td>Team1</td>
+                        <td>5 : 3</td>
+                        <td>Team4</td>
+                        <td>季後賽</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-10</td>
+                        <td>Team2</td>
+                        <td>2 : 6</td>
+                        <td>Team5</td>
+                        <td>友誼賽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
